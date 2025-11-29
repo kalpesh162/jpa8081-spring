@@ -8,7 +8,6 @@ import org.springframework.core.io.Resource;
 import com.bean.Employee;
 
 public class App {
-
 	public static void main(String[] args) {
 		// BeanFactory
 		// ApplicationContext
