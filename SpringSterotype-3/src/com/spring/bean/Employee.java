@@ -1,25 +1,18 @@
-package com.bean;
+package com.spring.bean;
 
 import java.io.Serializable;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-//@Scope("protoypte")
 public class Employee implements Serializable {
-	@Value("101")
+	@Value("121")
 	private int id;
-	@Value("Rahul")
+	@Value("Ramesh")
 	private String name;
-	@Value("23456")
+	@Value("2345")
 	private double salary;
-
-	// Reference Type
-	@Autowired
-	private Address address;
 
 	public Employee() {
 		System.out.println("Defalut Constructor");
@@ -32,20 +25,7 @@ public class Employee implements Serializable {
 		this.salary = salary;
 	}
 
-	public Employee(int id, String name, double salary, Address address) {
-		System.out.println("Employee With All fields");
-		this.id = id;
-		this.name = name;
-		this.salary = salary;
-		this.address = address;
-	}
-
-	// @Autowired // CI
-	public Employee(Address address) {
-		System.out.println("Employee With Address");
-		this.address = address;
-	}
-
+	
 	public int getId() {
 		return id;
 	}
@@ -78,14 +58,5 @@ public class Employee implements Serializable {
 		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
 	}
 
-	public Address getAddress() {
-		return address;
-	}
-
-	// @Autowired
-	public void setAddress(Address address) {
-		System.out.println("Set Address Called");
-		this.address = address;
-	}
-
+	
 }
