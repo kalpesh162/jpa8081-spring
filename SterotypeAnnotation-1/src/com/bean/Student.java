@@ -3,6 +3,7 @@ package com.bean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
+//@Component("stud")  giving a name to bean
 @Component
 public class Student {
 	@Value("11")
