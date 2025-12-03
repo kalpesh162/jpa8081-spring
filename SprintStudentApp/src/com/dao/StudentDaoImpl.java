@@ -2,19 +2,15 @@ package com.dao;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.stereotype.Repository;
-
 import com.bean.Student;
 
 @Repository
 public class StudentDaoImpl implements StudentDao {
-
 	private final List<Student> list = new ArrayList<Student>();
 
 	@Override
 	public boolean insertStudent(Student student) {
-
 		return list.add(student);
 	}
 
@@ -52,7 +48,6 @@ public class StudentDaoImpl implements StudentDao {
 			student.setName(upstudent.getName());
 			student.setMarks(upstudent.getMarks());
 		}
-
 	}
 
 }

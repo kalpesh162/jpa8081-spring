@@ -12,6 +12,8 @@ public class App {
 		
 		AnnotationConfigApplicationContext context=new AnnotationConfigApplicationContext(AppConfig.class);
 		
+		System.out.println("--->"+context.getBean("student11"));
+		
 		StudentService service=(StudentService)context.getBean("studentServiceImpl");
 		
 		Student student=new Student(11, "Tushar", 55.55);
